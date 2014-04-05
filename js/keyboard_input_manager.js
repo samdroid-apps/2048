@@ -125,6 +125,24 @@ KeyboardInputManager.prototype.listen = function () {
       self.emit("move", absDx > absDy ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0));
     }
   });
+
+  // Respond to clicks on the board
+  document.addEventListener("click", function (event) {
+    var rect = gameContainer.getBoundingClientRect();
+    var centerX = rect.left + rect.width / 2;
+    var centerY = rect.top + rect.height / 2;
+
+    var dx = event.clientX - centerX;
+    var absDx = Math.abs(dx);
+
+    var dy = event.clientY - centerY;
+    var absDy = Math.abs(dy);
+
+    if (Math.max(absDx, absDy) > 10) {
+      // (right : left) : (down : up)
+      self.emit("move", absDx > absDy ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0));
+    }
+  });
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
