@@ -9,24 +9,30 @@
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
+  <link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar-96dpi.css">
+  <link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar-200dpi.css">
+  <link rel="stylesheet" href="style/activity.css">
+  <script data-main="js/loader" src="lib/require.js"></script>
+
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
+  <div id="main-toolbar" class="toolbar">
+    <button class="toolbutton" id="activity-button" title="2048 Activity"></button>
+    <button class="toolbutton" id="restart-button" title="Restart Game"></button>
+     <button class="toolbutton" id="info-button" title="Help / Info"></button>
 
-    <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
-    </div>
+    <span class="score-container">0</span>
+    <span class="best-container">0</span>
+
+    <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+  </div>
+  <div id="canvas">
+  <div class="container">
 
     <div class="game-container">
       <div class="game-message">
@@ -68,18 +74,7 @@
 
       </div>
     </div>
-
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-    </p>
-    <hr>
-    <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
-    </p>
-    <hr>
-    <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-    </p>
+  </div>
   </div>
 
   <script src="js/bind_polyfill.js"></script>

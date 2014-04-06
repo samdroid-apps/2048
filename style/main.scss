@@ -59,37 +59,18 @@ h1.title {
   }
 }
 
-.scores-container {
-  float: right;
-  text-align: right;
-}
-
 .score-container, .best-container {
   $height: 25px;
 
-  position: relative;
-  display: inline-block;
-  background: $game-container-background;
-  padding: 15px 25px;
   font-size: $height;
   height: $height;
   line-height: $height + 22px;
   font-weight: bold;
-  border-radius: 3px;
   color: white;
-  margin-top: 8px;
-  text-align: center;
 
-  &:after {
-    position: absolute;
-    width: 100%;
-    top: 10px;
-    left: 0;
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 13px;
-    text-align: center;
+  &:before {
     color: $tile-color;
+    margin-right: 5px;
   }
 
   .score-addition {
@@ -106,11 +87,15 @@ h1.title {
   }
 }
 
-.score-container:after {
+.score-container {
+  margin-right: 15px;
+}
+
+.score-container:before {
   content: "Score";
 }
 
-.best-container:after {
+.best-container:before {
   content: "Best"
 }
 

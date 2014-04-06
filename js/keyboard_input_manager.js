@@ -70,7 +70,7 @@ KeyboardInputManager.prototype.listen = function () {
 
   // Respond to button presses
   this.bindButtonPress(".retry-button", this.restart);
-  this.bindButtonPress(".restart-button", this.restart);
+  this.bindButtonPress("#restart-button", this.restart);
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
 
   // Respond to swipe events
@@ -127,7 +127,7 @@ KeyboardInputManager.prototype.listen = function () {
   });
 
   // Respond to clicks on the board
-  document.addEventListener("click", function (event) {
+  document.getElementById("canvas").addEventListener("click", function (event) {
     var rect = gameContainer.getBoundingClientRect();
     var centerX = rect.left + rect.width / 2;
     var centerY = rect.top + rect.height / 2;
