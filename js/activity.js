@@ -11,12 +11,12 @@ define(function (require) {
         var infoBtn = document.getElementById("info-button");
         var infoPalette = new palette.Palette(infoBtn, "Help");
 
-        var content = document.createElement("SPAN");
+        var content = document.createElement("p");
         content.innerHTML = '<p class="game-explanation">' +
       '<strong class="important">How to play:</strong> Use your <strong>arrow keys, game keys</strong> or <strong>click</strong> in the direction to move the tiles.<br/>' +
       'When two tiles with the same number touch, they <strong>merge into one!</strong>' +
       '</p>' +
-      '<hr>' +
+      '<hr class="header-separator" style="display: block;">' +
       '<p>' +
       'Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a><br/>' +
       'Ported to Sugar by <a href="https://www.github.com/SAMdroid-apps" traget="_blank">Sam Parkinson.</a><br/>' +
