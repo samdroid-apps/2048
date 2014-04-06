@@ -13,8 +13,8 @@ define(function (require) {
 
         var content = document.createElement("SPAN");
         content.innerHTML = '<p class="game-explanation">' +
-      '<strong class="important">How to play:</strong> Use your <strong>arrow keys,<br/>game keys</strong> or <strong>click</strong> in the direction to move the tiles.<br/>' +
-      'When two tiles with the same number<br/> touch, they <strong>merge into one!</strong>' +
+      '<strong class="important">How to play:</strong> Use your <strong>arrow keys, game keys</strong> or <strong>click</strong> in the direction to move the tiles.<br/>' +
+      'When two tiles with the same number touch, they <strong>merge into one!</strong>' +
       '</p>' +
       '<hr>' +
       '<p>' +

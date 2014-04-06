@@ -12,5 +12,9 @@
 
 .palette {
   z-index: 9999999;
-  overflow: hidden;
+}
+
+.palette hr {
+  max-width: 100%;
+  width: auto;
 }
