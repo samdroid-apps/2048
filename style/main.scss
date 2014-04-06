@@ -67,8 +67,7 @@ h1.title {
   font-weight: bold;
   color: white;
 
-  display: inline-block;
-  vertical-align: middle;
+  padding-bottom: 6px;
 
   &:before {
     color: $tile-color;
@@ -90,7 +89,7 @@ h1.title {
 }
 
 .score-container {
-  margin-right: 15px;
+  padding-right: 15px;
 }
 
 .score-container:before {

@@ -51,8 +51,7 @@ h1.title {
   height: 25px;
   font-weight: bold;
   color: white;
-  display: inline-block;
-  vertical-align: middle; }
+  padding-bottom: 6px; }
   .score-container:before, .best-container:before {
     color: #eee4da;
     margin-right: 5px; }
@@ -73,7 +72,7 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container {
-  margin-right: 15px; }
+  padding-right: 15px; }
 
 .score-container:before {
   content: "Score"; }
