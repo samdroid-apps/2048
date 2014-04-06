@@ -64,9 +64,11 @@ h1.title {
 
   font-size: $height;
   height: $height;
-  line-height: $height + 22px;
   font-weight: bold;
   color: white;
+
+  display: inline-block;
+  vertical-align: middle;
 
   &:before {
     color: $tile-color;

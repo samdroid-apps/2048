@@ -49,9 +49,10 @@ h1.title {
 .score-container, .best-container {
   font-size: 25px;
   height: 25px;
-  line-height: 47px;
   font-weight: bold;
-  color: white; }
+  color: white;
+  display: inline-block;
+  vertical-align: middle; }
   .score-container:before, .best-container:before {
     color: #eee4da;
     margin-right: 5px; }

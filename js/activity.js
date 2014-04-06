@@ -1,19 +1,19 @@
 define(function (require) {
     var activity = require("sugar-web/activity/activity");
 
+
+    // Initialize the activity.
+    activity.setup();
+
     // Manipulate the DOM only when it is ready.
     require(['domReady!'], function (doc) {
-
-        // Initialize the activity.
-        activity.setup();
-
         palette = require("sugar-web/graphics/palette")
         var infoBtn = document.getElementById("info-button");
         var infoPalette = new palette.Palette(infoBtn, "Help");
 
         var content = document.createElement("SPAN");
         content.innerHTML = '<p class="game-explanation">' +
-      '<strong class="important">How to play:</strong> Use your <strong>arrow keys</strong><br/> (or click in the direction) to move the tiles.<br/>' +
+      '<strong class="important">How to play:</strong> Use your <strong>arrow keys,<br/>game keys</strong> or <strong>click</strong> in the direction to move the tiles.<br/>' +
       'When two tiles with the same number<br/> touch, they <strong>merge into one!</strong>' +
       '</p>' +
       '<hr>' +
