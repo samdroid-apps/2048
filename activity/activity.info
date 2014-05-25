@@ -4,3 +4,5 @@ activity_version = 1
 bundle_id = me.samdroid.sugar.2048
 exec = sugar-activity-web
 icon = activity-icon
+summary = A fun maths puzzle that took the world by storm!
+categories = game maths
